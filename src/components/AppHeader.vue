@@ -1,37 +1,22 @@
 <template>
-  <header>
-    <img alt="Vue logo" src="../assets/logo.png" height="50">
-    <p>My Vue.js Application</p>
-    <nav>
-      <ul>
-        <li><router-link to="/">Home</router-link></li>
-        <li><router-link to="/about">About</router-link></li>
-      </ul>
-    </nav>
-  </header>
+  <v-row>
+    <v-col cols="12" sm="12">
+      <v-card height="100%">
+        <v-card-title class="justify-center black white--text">
+          <span class="text-h5">フラッシュカード</span>
+        </v-card-title>
+      </v-card>
+    </v-col>
+  </v-row>
 </template>
 
-<style lang="scss">
-header {
-  display: flex;
-  border-bottom: 1px solid #ccc;
-  padding: .5rem 1rem;
-
-  p {
-    margin-left: 1rem;
-  }
+<script>
+export default {
+  data: () => ({
+    items: [
+      {title: 'Perfil'},
+      {title: 'Logout'},
+    ],
+  }),
 }
-
-nav {
-  margin-left: auto;
-
-  ul {
-    list-style: none;
-  }
-
-  ul li {
-    display: inline-flex;
-    margin-left: 1rem;
-  }
-}
-</style>
+</script>
